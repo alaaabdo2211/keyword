@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-11-06T17:29:16.990434" rpa="false" schemaversion="5">
+<suite id="s1" name="Swag" source="c:\development\robot-scripts\keyword\Tests\Swag.robot">
+<test id="s1-t1" name="Should add product to cart" line="10">
+<kw name="Search For Products" owner="Swag">
+<kw name="Open Browser" owner="Selenium2Library">
+<msg time="2024-11-06T17:29:17.322367" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
+<arg>https://www.saucedemo.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-06T17:29:17.321887" elapsed="3.211921"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="Selenium2Library">
+<arg>Swag Labs</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-06T17:29:20.535178" elapsed="0.024978"/>
+</kw>
+<kw name="Sign In Customer" owner="Signin">
+<kw name="Input Text" owner="Selenium2Library">
+<msg time="2024-11-06T17:29:20.562267" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>id=user-name</arg>
+<arg>standard_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T17:29:20.561548" elapsed="0.167495"/>
+</kw>
+<kw name="Input Text" owner="Selenium2Library">
+<msg time="2024-11-06T17:29:20.730034" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T17:29:20.729522" elapsed="0.103162"/>
+</kw>
+<kw name="Click Button" owner="Selenium2Library">
+<msg time="2024-11-06T17:29:20.833235" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T17:29:20.832962" elapsed="0.098634"/>
+</kw>
+<status status="PASS" start="2024-11-06T17:29:20.560839" elapsed="0.371170"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="Selenium2Library">
+<arg>Products</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-06T17:29:20.932363" elapsed="0.017801"/>
+</kw>
+<status status="PASS" start="2024-11-06T17:29:17.320047" elapsed="3.630403"/>
+</kw>
+<kw name="Add Product to Cart" owner="Swag">
+<kw name="Click Button" owner="Selenium2Library">
+<msg time="2024-11-06T17:29:20.952860" level="INFO">Clicking button 'id=add-to-cart-sauce-labs-backpack'.</msg>
+<arg>id=add-to-cart-sauce-labs-backpack</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T17:29:20.952315" elapsed="0.075637"/>
+</kw>
+<status status="PASS" start="2024-11-06T17:29:20.951432" elapsed="0.076727"/>
+</kw>
+<kw name="Begin Checkout" owner="Swag">
+<kw name="Click Element" owner="Selenium2Library">
+<msg time="2024-11-06T17:29:21.029615" level="INFO">Clicking element 'css=#shopping_cart_container a.shopping_cart_link'.</msg>
+<arg>css=#shopping_cart_container a.shopping_cart_link</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T17:29:21.029162" elapsed="0.053161"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="Selenium2Library">
+<arg>Your Cart</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-06T17:29:21.082594" elapsed="0.017772"/>
+</kw>
+<kw name="Click Button" owner="Selenium2Library">
+<msg time="2024-11-06T17:29:21.101291" level="INFO">Clicking button 'id=checkout'.</msg>
+<arg>id=checkout</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T17:29:21.100780" elapsed="0.064710"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="Selenium2Library">
+<arg>Checkout: Your Information</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-06T17:29:21.165767" elapsed="0.015411"/>
+</kw>
+<status status="PASS" start="2024-11-06T17:29:21.028680" elapsed="0.152705"/>
+</kw>
+<kw name="After Checkout" owner="Swag">
+<kw name="Input Text" owner="Selenium2Library">
+<msg time="2024-11-06T17:29:21.182752" level="INFO">Typing text 'Alaa' into text field 'id=first-name'.</msg>
+<arg>id=first-name</arg>
+<arg>Alaa</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T17:29:21.182435" elapsed="0.080265"/>
+</kw>
+<kw name="Input Text" owner="Selenium2Library">
+<msg time="2024-11-06T17:29:21.263251" level="INFO">Typing text 'Abdo' into text field 'id=last-name'.</msg>
+<arg>id=last-name</arg>
+<arg>Abdo</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T17:29:21.262972" elapsed="0.071394"/>
+</kw>
+<kw name="Input Text" owner="Selenium2Library">
+<msg time="2024-11-06T17:29:21.335194" level="INFO">Typing text '00962' into text field 'id=postal-code'.</msg>
+<arg>id=postal-code</arg>
+<arg>00962</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T17:29:21.334771" elapsed="0.074571"/>
+</kw>
+<kw name="Click Button" owner="Selenium2Library">
+<msg time="2024-11-06T17:29:21.409956" level="INFO">Clicking button 'id=continue'.</msg>
+<arg>id=continue</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T17:29:21.409621" elapsed="0.057457"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="Selenium2Library">
+<arg>Checkout: Overview</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-06T17:29:21.467615" elapsed="0.014123"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-06T17:29:26.482897" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-06T17:29:21.482004" elapsed="5.001686"/>
+</kw>
+<kw name="Click Button" owner="Selenium2Library">
+<msg time="2024-11-06T17:29:26.485544" level="INFO">Clicking button 'id=finish'.</msg>
+<arg>id=finish</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T17:29:26.484483" elapsed="0.087459"/>
+</kw>
+<status status="PASS" start="2024-11-06T17:29:21.182052" elapsed="5.390177"/>
+</kw>
+<kw name="End Web Test" owner="Common">
+<kw name="Close Browser" owner="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-06T17:29:26.573519" elapsed="2.197445"/>
+</kw>
+<status status="PASS" start="2024-11-06T17:29:26.572865" elapsed="2.198489"/>
+</kw>
+<status status="PASS" start="2024-11-06T17:29:17.318833" elapsed="11.453211"/>
+</test>
+<doc>This is some basic info about the whole suite</doc>
+<status status="PASS" start="2024-11-06T17:29:16.996519" elapsed="11.777287"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Swag">Swag</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
